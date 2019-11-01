@@ -1,0 +1,12 @@
+{% extends "mainpage/main.html" %}
+{% block content %}
+    
+        <h2> You have been looged out</h2>
+        <div class="border-top pt-3">
+            <small class="text-muted">
+                Already Have An Account? <a class="ml-2" href="{% url 'login' %}">Login In again</a>
+            </small>
+        </div>
+    </div>
+{% endblock content %}
+

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+
+ 
+
+<body>
+
+
+<h1>UPLOAD</h1>
+    <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <fieldset class="form-group">
+                
+                {{ p_form|crispy }}
+
+	        <div class="form-group">
+	          <label>Upload File</label>
+	          <input type="file">
+	          <p class="help-block">Only png and jpg allowed</p>
+	        </div>
+            </fieldset>
+            <div class="form-group">
+                <button class="btn btn-outline-info" type="submit">Upload</button>
+            </div>
+    </form>        
+</body>
+</html>

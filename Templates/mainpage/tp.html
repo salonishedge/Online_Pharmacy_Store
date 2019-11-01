@@ -1,0 +1,32 @@
+{% extends "mainpage/main.html" %}
+{%  load static %}
+
+{% block content %}
+
+
+{% load crispy_forms_tags %}
+
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <title>Hotel_image</title> 
+</head> 
+<body> 
+    <div>
+    <form method = "post" enctype="multipart/form-data"> 
+        {% csrf_token %} 
+        {{ form.as_p }} 
+        <div class="form-group">
+              <label>Upload File</label>
+              <input type="file">
+              <p class="help-block">Only png and jpg allowed</p>
+            </div>
+            </fieldset>
+            
+        <button type="submit">Upload</button> 
+    </form> 
+    </div>
+</body> 
+</html> 
+{% endblock content %}
